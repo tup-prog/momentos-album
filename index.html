@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECUERDITOS - S & F | Nuestra historia de amor</title>
+    <meta name="description" content="A collection of our most cherished moments together. Explore our photo gallery celebrating love, laughter, and endless adventures.">
+    <meta property="og:title" content="Moments Album - Emma & James">
+    <meta property="og:description" content="A visual journey through our favorite memories captured in time.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVEGACIÓN -->
+    <nav id="nav-main" class="nav-fixed">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" data-testid="link-logo">
+                <span class="heart-icon">❤️</span>
+                <span>RECUERDITOS</span>
+            </a>
+            
+            <ul id="nav-desktop-links" class="nav-desktop-links" data-testid="nav-desktop-links">
+                <li><a href="#home" data-testid="link-casita">Casita</a></li>
+                <li><a href="#story" data-testid="link-nuestra-historia">Nuestra Historia</a></li>
+                <li><a href="#gallery" data-testid="link-fotitos">Fotitos</a></li>
+                <li><a href="#love" data-testid="link-amarte">Amarte</a></li>
+            </ul>
+            
+            <button id="hamburger-btn" class="hamburger-btn" data-testid="button-hamburger" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MENÚ MÓVIL -->
+    <div id="mobile-menu" class="mobile-menu" data-testid="nav-mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="#home" class="nav-logo">
+                <span class="heart-icon">❤️</span>
+                <span>RECUERDITOS</span>
+            </a>
+            <button id="close-menu-btn" class="close-menu-btn" data-testid="button-close-menu">✕</button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="#home" data-testid="link-mobile-casita">Casita</a>
+            <a href="#story" data-testid="link-mobile-nuestra-historia">Nuestra Historia</a>
+            <a href="#gallery" data-testid="link-mobile-fotitos">Fotitos</a>
+            <a href="#love" data-testid="link-mobile-amarte">Amarte</a>
+        </div>
+        <div class="mobile-menu-footer">
+            <p>Hecho por tu gordito</p>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="home" class="hero" data-testid="section-hero">
+        <div class="hero-content">
+            <div class="hero-icon">❤️</div>
+            <h1 class="hero-title" data-testid="text-hero-title">S & F</h1>
+            <p class="hero-subtitle" data-testid="text-hero-subtitle">
+                Una pequeña coleccion de todo de lo que hemos pasado juntos, en verdad te amo demasiado mi gordita, leas cuando lo leas, quiero que sepas que te amaré con todo mi corazón y que haré todo lo que esté en mis manos para que seas feliz.
+            </p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn btn-primary" data-testid="button-view-gallery">
+                    <span>📷</span> Ver Fotitos
+                </a>
+                <a href="#story" class="btn btn-secondary" data-testid="button-our-story">
+                    Nuestra Historia
+                </a>
+                <a href="#love" class="btn btn-secondary" data-testid="button-love-reason">
+                    <span>❤️</span> La razón de amarte
+                </a>
+            </div>
+            <div class="hero-divider">
+                <div class="divider-line"></div>
+                <span>❤️</span>
+                <div class="divider-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="story" class="timeline-section" data-testid="section-story">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="text-story-title">Nuestra Historia</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div id="timeline" class="timeline"></div>
+            <button id="ver-mas-btn" class="btn btn-primary ver-mas-btn">Ver más</button>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Fotitos</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div id="gallery-grid" class="gallery-grid"></div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" data-testid="lightbox-overlay">
+        <button id="lightbox-close" class="lightbox-close" data-testid="button-lightbox-close">✕</button>
+        <button id="lightbox-prev" class="lightbox-nav lightbox-prev" data-testid="button-lightbox-prev">❮</button>
+        <div class="lightbox-content" data-testid="lightbox-content">
+            <img id="lightbox-img" src="" alt="Foto">
+        </div>
+        <button id="lightbox-next" class="lightbox-nav lightbox-next" data-testid="button-lightbox-next">❯</button>
+        <div class="lightbox-counter">
+            <span id="lightbox-current">1</span> de <span id="lightbox-total">1</span>
+        </div>
+        <div class="lightbox-dots" id="lightbox-dots"></div>
+    </div>
+
+    <!-- AMARTE -->
+    <section id="love" class="love-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Amarte</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="love-intro">
+                <p>Cada día descubro nuevas razones para amarte. Eres lo mejor que me ha pasado en la vida.</p>
+            </div>
+            <div class="love-cards">
+                <div class="love-card">
+                    <h3>Tu Sonrisa</h3>
+                    <p>Ilumina mis días y me hace querer ser mejor persona</p>
+                </div>
+                <div class="love-card">
+                    <h3>Tu Compañía</h3>
+                    <p>Contigo me siento en casa, seguro y querido</p>
+                </div>
+                <div class="love-card">
+                    <h3>Tu Risa</h3>
+                    <p>Es mi música favorita, mi razón para sonreír</p>
+                </div>
+                <div class="love-card">
+                    <h3>Tu Corazón</h3>
+                    <p>Generoso, puro y lleno de amor para mí</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Con amor, S & F ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
